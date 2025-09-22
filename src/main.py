@@ -19,13 +19,15 @@ def main():
     try:
         for i, tab in enumerate(tabs__):
             with tab:
-                if st.button(f'Iniciar conversa com {person_names[i]}'):
-                    inst_chat.setPersonagem(i)
-                    st.subheader(f'Olá, você esta conversando com {person_names[i]}')
-                    question = st.text_input('Pergunta')
+                PATH_IMAGE = f'{settings_conf.PATH_ASSETS / person_names[i]}.jpeg' 
+                st.image(image=str(PATH_IMAGE),caption=f'{person_names[i]}')
+                inst_chat.setPersonagem(i)
+                st.subheader(f'Olá, você esta conversando com {person_names[i]}')
+                question = st.text_input('Pergunta', key=f'question_{i}')
+                if st.button(label='Enviar', key=f'send_{i}'):
                     st.write(inst_chat.responda(question))
     except Exception as e:
-        st.error(f'Ops! Sei la eu o que deu, da teus pulo ai')
+        st.error(f'Ops! Sei la eu o que deu, da teus pulo ai --> Error {e}')
 
 if __name__ == '__main__':
     with st.container(border=True):
