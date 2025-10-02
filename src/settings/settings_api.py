@@ -1,5 +1,5 @@
 import os
-from src.settings.settings_conf import PATH_DOTENV
+from settings.settings_conf import PATH_DOTENV
 from dotenv import load_dotenv
 
 
