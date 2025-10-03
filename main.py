@@ -42,7 +42,7 @@ def intro():
 
         ### Créditos
 
-        Trabalho desenvolvido por [Kalyo Airan da Silva](https://github.com/Kalyo-silva)
+        Trabalho desenvolvido por [Kalyo Airan da Silva](https://github.com/Kalyo-silva), [Marcus André Geacomo Demarchi](https://github.com/Marcusedemarchi), Jean Koerich, Davi Chiquetti e Carlos Eduardo Nogueira de Oliveira.
 
         """
     )
